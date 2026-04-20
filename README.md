@@ -1,6 +1,4 @@
-# kimamabase
-週末工房木ままBASEウェブサイト
-[README.md](https://github.com/user-attachments/files/26318957/README.md)
+[README.md](https://github.com/user-attachments/files/26881557/README.md)
 # 週末工房 木ままBASE — 公式サイト
 
 三重県いなべ市にある木工・DIY工房「週末工房 木ままBASE」の公式Webサイトです。
