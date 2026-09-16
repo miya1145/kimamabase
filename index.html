@@ -12,6 +12,91 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style id="first-visit-layout">
+    @media (min-width: 1025px) {
+      #features .features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    /* Keep the first-visit guide independent of the former members-only grid. */
+    #flow .flow-first-visit {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px;
+      background: linear-gradient(180deg, #e9eee3, #f3f4eb);
+      border: 1px solid rgba(90, 122, 82, 0.16);
+      border-radius: 12px;
+      box-shadow: 0 10px 26px rgba(62, 88, 57, 0.08);
+    }
+    #flow .flow-first-visit > h3 {
+      margin-bottom: 20px;
+      font-family: var(--font-serif);
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      font-weight: 500;
+      color: var(--color-primary-d);
+      line-height: 1.6;
+    }
+    #flow .flow-steps-preview { padding: 0; margin-bottom: 28px; }
+    #flow .flow-detail + .flow-detail { margin-top: 20px; }
+    #flow .flow-detail h4 {
+      margin-bottom: 6px;
+      font-family: var(--font-serif);
+      font-size: 1.03rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    #flow .flow-detail p {
+      color: var(--color-text-sub);
+      font-size: 0.94rem;
+      line-height: 1.9;
+    }
+    #flow .flow-inquiry {
+      margin-top: 28px;
+      padding: 24px;
+      background: var(--color-white);
+      border: 1px solid rgba(90, 122, 82, 0.22);
+      border-radius: 8px;
+      text-align: center;
+    }
+    #flow .flow-inquiry h3 {
+      margin-bottom: 12px;
+      font-family: var(--font-serif);
+      font-size: 1.12rem;
+      font-weight: 500;
+      color: var(--color-primary-d);
+      line-height: 1.7;
+    }
+    #flow .flow-inquiry p {
+      max-width: 560px;
+      margin: 0 auto;
+      color: var(--color-text-sub);
+      font-size: 0.94rem;
+      line-height: 1.9;
+      text-align: left;
+    }
+    #flow .flow-inquiry .flow-inquiry-button {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0 0.35em;
+      width: 100%;
+      max-width: 440px;
+      min-height: 52px;
+      margin: 20px auto 12px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 1.7;
+      white-space: normal;
+    }
+    #flow .flow-inquiry-button span { white-space: nowrap; }
+    #flow .flow-inquiry .flow-inquiry-note {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    @media (max-width: 480px) {
+      #flow .flow-first-visit { padding: 20px 16px; }
+      #flow .flow-inquiry { padding: 20px 16px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -493,7 +578,7 @@
     <div class="container">
       <div class="section-label cormorant">How to use</div>
       <h2 class="section-title">ご利用の流れ</h2>
-      <div class="flow-preparing">
+      <div class="flow-first-visit">
         <h3>初めてご利用の方</h3>
         <div class="flow-steps-preview">
           <div class="flow-step-preview">
@@ -516,16 +601,28 @@
             <div class="step-label">利用開始</div>
           </div>
         </div>
-        <p><strong>1.お問い合わせ</strong></p>
-        <p>InstagramのDMで初回体験の希望日や、ご利用について知りたいことをお知らせください。日程を調整してご案内します。</p>
-        <p><strong>2.初回体験</strong></p>
-        <p>工房の雰囲気や利用方法をご確認いただきます。初回体験料は1,000円です。</p>
-        <p><strong>3.入会</strong></p>
-        <p>入会金3,000円（講習費・保険料を含む）と、6ヶ月利用料6,000円をお支払いいただきます。</p>
-        <p><strong>4.利用開始</strong></p>
-        <p>入会手続き後から、木ままBASEをご利用いただけます。</p>
-        <a href="https://www.instagram.com/kimamabase/" target="_blank" rel="noopener" class="btn btn-primary">InstagramのDMでお問い合わせ</a>
-        <p class="flow-instagram-note member-notice">初めての方は、初回体験からお願いいたします。</p>
+        <div class="flow-detail">
+          <h4>1.お問い合わせ</h4>
+          <p>InstagramのDMで初回体験の希望日や、ご利用について知りたいことをお知らせください。日程を調整してご案内します。</p>
+        </div>
+        <div class="flow-detail">
+          <h4>2.初回体験</h4>
+          <p>工房の雰囲気や利用方法をご確認いただきます。初回体験料は1,000円です。</p>
+        </div>
+        <div class="flow-detail">
+          <h4>3.入会</h4>
+          <p>入会金3,000円（講習費・保険料を含む）と、6ヶ月利用料6,000円をお支払いいただきます。</p>
+        </div>
+        <div class="flow-detail">
+          <h4>4.利用開始</h4>
+          <p>入会手続き後から、木ままBASEをご利用いただけます。</p>
+        </div>
+        <div class="flow-inquiry" aria-labelledby="flow-inquiry-title">
+          <h3 id="flow-inquiry-title">初回体験のお申し込み・お問い合わせ</h3>
+          <p>初回体験のお申し込みやご利用についてのご相談は、InstagramのDMで受け付けています。ご希望の日程やご質問をお送りください。</p>
+          <a href="https://www.instagram.com/kimamabase/" target="_blank" rel="noopener" class="btn btn-primary flow-inquiry-button"><span>InstagramのDMで</span><span>初回体験を申し込む</span></a>
+          <p class="flow-inquiry-note">プロフィールの「メッセージ」からお送りください。</p>
+        </div>
       </div>
     </div>
   </section>
